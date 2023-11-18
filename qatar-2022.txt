@@ -1,0 +1,431 @@
+mongosh mongodb+srv://cluster-01.vbfmaex.mongodb.net/ --username sebas
+
+use qatar-2022
+
+db.referees.insertMany([
+    {
+        name: "Abdulrahman Al-Jassim",
+        country: "Catar",
+        confederacy: "AFC",
+        role: "Main",
+    },
+    {
+        name: "Christopher Beath",
+        country: "Australia",
+        confederacy: "AFC",
+        role: "Main",
+    },
+    {
+        name: "Mohammadreza Abolfazli",
+        country: "Irán",
+        confederacy: "AFC",
+        role: "Assistant",
+    },
+    {
+        name: "Abdulla Al-Marri",
+        country: "Catar",
+        confederacy: "AFC",
+        role: "VAR",
+    },
+    {
+        name: "Iván Arcides Barton Cisneros",
+        country: "El Salvador",
+        confederacy: "Concacaf",
+        role: "Main",
+    },
+    {
+        name: "Ismail Elfath",
+        country: "Estados Unidos",
+        confederacy: "Concacaf",
+        role: "Main",
+    },
+    {
+        name: "Kyle Atkins",
+        country: "Estados Unidos",
+        confederacy: "Concacaf",
+        role: "Assistant",
+    },
+    {
+        name: "Drew Fischer",
+        country: "Canadá",
+        confederacy: "Concacaf",
+        role: "VAR",
+    },
+    {
+        name: "Raphael Claus",
+        country: "Brasil",
+        confederacy: "Conmebol",
+        role: "Main",
+    },
+    {
+        name: "Andrés Matías Matonte Cabrera",
+        country: "Uruguay",
+        confederacy: "Conmebol",
+        role: "Main",
+    },
+    {
+        name: "Neuza Ines Back",
+        country: "Brasil",
+        confederacy: "Conmebol",
+        role: "Assistant",
+    },
+    {
+        name: "Julio Alberto Bascuñán González",
+        country: "Chile",
+        confederacy: "Conmebol",
+        role: "VAR",
+    },
+    {
+        name: "Stéphanie Frappart",
+        country: "Francia",
+        confederacy: "UEFA",
+        role: "Main",
+    },
+    {
+        name: "István Kovács",
+        country: "Rumania",
+        confederacy: "UEFA",
+        role: "Main",
+    },
+    {
+        name: "Ovidiu Artene",
+        country: "Rumania",
+        confederacy: "UEFA",
+        role: "Assistant",
+    },
+    {
+        name: "Jérôme Brisard",
+        country: "Francia",
+        confederacy: "UEFA",
+        role: "VAR",
+    }
+])
+
+db.referees.find()
+
+db.teams.insertMany([
+    {
+        name: "Países Bajos",
+        group: "Grupo A",
+        confederacy: "UEFA",
+        coach: {
+            name: "Aloysius Paulus van Gaal",
+            age: 72,
+            country: "Países Bajos",
+        },
+        base_camps: {
+            city: "Doha",
+            base: "The St. Regis Doha",
+            training_ground: "Universidad de Catar, complejo deportivo 6"
+        },
+        goals_scored: 10,
+        goals_received: 4,
+        ranking_FIFA: "8° lugar"
+    },
+    {
+        name: "Inglaterra",
+        group: "Grupo B",
+        confederacy: "UEFA",
+        coach: {
+            name: "Gareth Southgatel",
+            age: 53,
+            country: "Inglaterra",
+        },
+        base_camps: {
+            city: "Al Wakrah",
+            base: "Hotel Souq Al Wakra Qatar",
+            training_ground: "Estadio Saoud bin Abdulrahman"
+        },
+        goals_scored: 13,
+        goals_received: 4,
+        ranking_FIFA: "5° lugar"
+    },
+    {
+        name: "Argentina",
+        group: "Grupo C",
+        confederacy: "Conmebol",
+        coach: {
+            name: "Lionel Sebastián Scaloni",
+            age: 45,
+            country: "Argentina",
+        },
+        base_camps: {
+            city: "Doha",
+            base: "Universidad de Catar, Hostel 1",
+            training_ground: "Universidad de Catar, complejo deportivo 3"
+        },
+        goals_scored: 15,
+        goals_received: 8,
+        ranking_FIFA: "3° lugar"
+    },
+    {
+        name: "Francia",
+        group: "Grupo D",
+        confederacy: "UEFA",
+        coach: {
+            name: "Didier Claude Deschamps",
+            age: 55,
+            country: "Francia",
+        },
+        base_camps: {
+            city: "Rayán",
+            base: "Al Messila, Luxury Collection Resort & Spa",
+            training_ground: "Estadio Jassim bin Hamad"
+        },
+        goals_scored: 16,
+        goals_received: 8,
+        ranking_FIFA: "4° lugar"
+    },
+    {
+        name: "Japón",
+        group: "Grupo E",
+        confederacy: "AFC",
+        coach: {
+            name: "Hajime Moriyasu",
+            age: 55,
+            country: "Japón",
+        },
+        base_camps: {
+            city: "Doha",
+            base: "Hotel Radisson Blu Doha",
+            training_ground: "Estadio Jassim bin Hamad, instalación 1"
+        },
+        goals_scored: 5,
+        goals_received: 4,
+        ranking_FIFA: "24° lugar"
+    },
+    {
+        name: "Marruecos",
+        group: "Grupo F",
+        confederacy: "CAF",
+        coach: {
+            name: "Walid Regragui",
+            age: 48,
+            country: "Marruecos",
+        },
+        base_camps: {
+            city: "Doha",
+            base: "Wyndham Doha West Bay",
+            training_ground: "Estadio Abdullah bin Khalifa"
+        },
+        goals_scored: 6,
+        goals_received: 5,
+        ranking_FIFA: "22° lugar"
+    },
+    {
+        name: "Brasil",
+        group: "Grupo G",
+        confederacy: "Conmebol",
+        coach: {
+            name: "Adenor Leonardo Bacchi",
+            age: 62,
+            country: "Brasil",
+        },
+        base_camps: {
+            city: "Doha",
+            base: "The Westin Doha Hotel y Spa",
+            training_ground: "Estadio Grand Hamad"
+        },
+        goals_scored: 8,
+        goals_received: 3,
+        ranking_FIFA: "1° lugar"
+    },
+    {
+        name: "Portugal",
+        group: "Grupo H",
+        confederacy: "UEFA",
+        coach: {
+            name: "Fernando Manuel Costa Santos",
+            age: 59,
+            country: "Portugal",
+        },
+        base_camps: {
+            city: "Al Shahaniya",
+            base: "Hotel Al Samriya Autograph Collection",
+            training_ground: "Instalación Deportiva Al-Shahaniya"
+        },
+        goals_scored: 12,
+        goals_received: 6,
+        ranking_FIFA: "8° lugar"
+    }
+])
+
+db.teams.find()
+
+db.players.insertMany([
+    {
+        name: "Lionel Messi",
+        age: 36,
+        height: 1.70,
+        weight: 72,
+        dominant_foot: "Izquierdo",
+        team: "Argentina",
+        number: 10,
+        position: ["Delantero", "Centrocampista"],
+        goals: 7,
+        fouls: {
+            committed: 10,
+            suffered: 22
+        }
+    },
+    {
+        name: "Antoine Griezmann",
+        age: 32,
+        height: 1.76,
+        weight: 73,
+        dominant_foot: "Izquierdo",
+        team: "Francia",
+        number: 7,
+        position: ["Delantero", "Delantero centro"],
+        goals: 0,
+        fouls: {
+            committed: 3,
+            suffered: 9
+        }
+    },
+    {
+        name: "Luka Modric",
+        age: 38,
+        height: 1.72,
+        weight: 63,
+        dominant_foot: "Derecho",
+        team: "Croacia",
+        number: 10,
+        position: ["Medio campo", "Mediocentro"],
+        goals: 0,
+        fouls: {
+            committed: 13,
+            suffered: 15
+        }
+    },
+    {
+        name: "Sofyan Amrabat",
+        age: 27,
+        height: 1.83,
+        weight: 70,
+        dominant_foot: "Derecho",
+        team: "Marruecos",
+        number: 4,
+        position: ["Medio campo", "Pivote"],
+        goals: 0,
+        fouls: {
+            committed: 14,
+            suffered: 6
+        }
+    },
+    {
+        name: "Jude Bellingham",
+        age: 20,
+        height: 1.86,
+        weight: 75,
+        dominant_foot: "Derecho",
+        team: "Inglaterra",
+        number: 5,
+        position: ["Medio campo", "Mediocentro"],
+        goals: 1,
+        fouls: {
+            committed: 5,
+            suffered: 5
+        }
+    },
+])
+
+db.players.find()
+
+db.stadiums.insertMany([
+    {
+        name: "Estadio Internacional Khalifa",
+        location: {
+            city: "Rayán",
+            municipality: "Municipio de Rayán (Área de Doha)"
+        },
+        capacity: 45857,
+        construction_year: "2014",
+        dimensions: {
+            long: 100,
+            high: 65,
+        }
+    },
+    {
+        name: "Estadio Al Bayt",
+        location: {
+            city: "Jor",
+            municipality: "Municipio de Jor"
+        },
+        capacity: 68895,
+        construction_year: "2016",
+        dimensions: {
+            long: 372,
+            high: 310,
+        }
+    },
+    {
+        name: "Estadio Al Janoub",
+        location: {
+            city: "Al Wakrah",
+            municipality: "Municipio de Al Wakrah"
+        },
+        capacity: 44325,
+        construction_year: "2016",
+        dimensions: {
+            long: 105,
+            high: 68,
+        }
+    },
+    {
+        name: "Estadio Ciudad de la Educación",
+        location: {
+            city: "Rayán",
+            municipality: "Municipio de Rayán (Área de Doha)"
+        },
+        capacity: 44667,
+        construction_year: "2016"
+    },
+    {
+        name: "Estadio Áhmad bin Ali",
+        location: {
+            city: "Rayán",
+            municipality: "Municipio de Rayán (Área de Doha)"
+        },
+        capacity: 45032,
+        construction_year: "2003",
+        dimensions: {
+            long: 105,
+            high: 68,
+        }
+    },
+    {
+        name: "Estadio de Lusail",
+        location: {
+            city: "Lusail",
+            municipality: "Municipio de Al Dayyen"
+        },
+        capacity: 88966,
+        construction_year: "2022",
+        dimensions: {
+            long: 105,
+            high: 68,
+        }
+    },
+    {
+        name: "Estadio 974",
+        location: {
+            city: "Doha",
+            municipality: "Municipio de Ad Dawhah"
+        },
+        capacity: 44089,
+        construction_year: "2018"
+    },
+    {
+        name: "Estadio Al Thumama",
+        location: {
+            city: "Doha",
+            municipality: "Municipio de Ad Dawhah"
+        },
+        capacity: 44400,
+        construction_year: "2015",
+        dimensions: 50000000
+    },
+])
+
+db.stadiums.find()
