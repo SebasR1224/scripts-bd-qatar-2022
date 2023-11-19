@@ -1,4 +1,4 @@
-mongosh mongodb+srv://cluster-01.vbfmaex.mongodb.net/ --username sebas
+mongosh mongodb+srv://cluster-01.vbfmaex.mongodb.net/ --username <username>
 
 use qatar-2022
 
@@ -456,7 +456,7 @@ db.matches.insertMany([
                                 "teamA": 0,
                                 "teamB": 2
                             }
-                        }, 
+                        },
                         {
                             "team": "Netherlands",
                             "player": "Wout Weghorst",
@@ -473,7 +473,7 @@ db.matches.insertMany([
                             "partialScore": {
                                 "teamA": 2,
                                 "teamB": 2
-                            } 
+                            }
                         }
                     ],
             "penaltiesResult":
@@ -552,7 +552,7 @@ db.matches.insertMany([
                                 "teamA": 1,
                                 "teamB": 1
                             }
-                        }, 
+                        },
                         {
                             "team": "France",
                             "player": "Olivier Giroud",
@@ -620,7 +620,7 @@ db.matches.insertMany([
                                 "teamA": 2,
                                 "teamB": 0
                             }
-                        }, 
+                        },
                         {
                             "team": "Argentina",
                             "player": "Julian Alvarez",
@@ -708,3 +708,26 @@ db.matches.insertMany([
     }
 ]
 )
+
+#queries
+
+1. Search for players over 30 years old:
+    db.players.find({ age: { $gt: 30 } })
+2.Search for players who play as Forward:
+    db.players.find({ position: 'Delantero' })
+3. Search all quarterfinal matches:
+    db.matches.find({ phase: 'Quarter finals' })
+4. Find all the games in which Lionel Messi scored a goal:
+    db.matches.find({ 'matchInfo.goals.player': 'Lionel Messi' })
+5. Search all main referees (role: 'Main'):
+    db.referees.find({ role: 'Main' })
+6. Search all UEFA confederation referees:
+    db.referees.find({ confederacy: 'UEFA' })
+7. Search for stadiums with a capacity greater than 50,000:
+    db.stadiums.find({ capacity: { $gt: 50000 } })
+8. Search for stadiums built after 2015:
+    db.stadiums.find({ construction_year: { $gt: '2015' } })
+9. Search teams from the Conmebol confederation:
+    db.teams.find({ confederacy: 'Conmebol' })
+10. Find teams that have scored more than 10 goals:
+    db.teams.find({ goals_scored: { $gt: 10 } })
