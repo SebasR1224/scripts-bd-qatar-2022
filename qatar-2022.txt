@@ -429,3 +429,282 @@ db.stadiums.insertMany([
 ])
 
 db.stadiums.find()
+
+db.matches.insertMany([
+    {
+        "phase": "Quarter finals",
+        "date": "2022/09/09",
+        "teamA": "Netherlands",
+        "teamB": "Argentina",
+        "stadium": "Lusail stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "Argentina",
+                            "player": "Nahuel Molina",
+                            "minute": "35",
+                            "partialScore": {
+                                "teamA": 0,
+                                "teamB": 1
+                            }
+                        },
+                        {
+                            "team": "Argentina",
+                            "player": "Lionel Messi",
+                            "minute": "73",
+                            "partialScore": {
+                                "teamA": 0,
+                                "teamB": 2
+                            }
+                        }, 
+                        {
+                            "team": "Netherlands",
+                            "player": "Wout Weghorst",
+                            "minute": "73",
+                            "partialScore": {
+                                "teamA": 1,
+                                "teamB": 2
+                            }
+                        },
+                        {
+                            "team": "Netherlands",
+                            "player": "Wout Weghorst",
+                            "minute": "90+11",
+                            "partialScore": {
+                                "teamA": 2,
+                                "teamB": 2
+                            } 
+                        }
+                    ],
+            "penaltiesResult":
+                {
+                    "teamA":3,
+                    "teamB":4
+                },
+            "finalResult":{
+                "winner": "Argentina",
+                "loser": "Netherlands",
+                "finalScore":"2(4) - 2(3)"
+            }
+        }
+    },
+    {
+        "phase": "Quarter finals",
+        "date": "2022/09/09",
+        "teamA": "Croatia",
+        "teamB": "Brasil",
+        "stadium": "Education city stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "Brasil",
+                            "player": "Neymar",
+                            "minute": "105+1",
+                            "partialScore": {
+                                "teamA": 0,
+                                "teamB": 1
+                            }
+                        },
+                        {
+                            "team": "Croatia",
+                            "player": "Bruno Petkovic",
+                            "minute": "117",
+                            "partialScore": {
+                                "teamA": 1,
+                                "teamB": 1
+                            }
+                        }
+                    ],
+            "penaltiesResult":
+                {
+                    "teamA":4,
+                    "teamB":2
+                },
+            "finalResult":{
+                "winner": "Croatia",
+                "loser": "Brasil",
+                "finalScore":"1(4) - 1(2)"
+            }
+        }
+    },
+    {
+        "phase": "Quarter finals",
+        "date": "2022/09/10",
+        "teamA": "England",
+        "teamB": "France",
+        "stadium": "Al Bayt stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "France",
+                            "player": "Aurelien TCHOUAMENI",
+                            "minute": "17",
+                            "partialScore": {
+                                "teamA": 0,
+                                "teamB": 1
+                            }
+                        },
+                        {
+                            "team": "England",
+                            "player": "Harry Kane",
+                            "minute": "54",
+                            "partialScore": {
+                                "teamA": 1,
+                                "teamB": 1
+                            }
+                        }, 
+                        {
+                            "team": "France",
+                            "player": "Olivier Giroud",
+                            "minute": "78",
+                            "partialScore": {
+                                "teamA": 1,
+                                "teamB": 2
+                            }
+                        }
+                    ],
+            "finalResult":{
+                "winner": "France",
+                "loser": "England",
+                "finalScore":"2 - 1"
+            }
+        }
+    },
+    {
+        "phase": "Quarter finals",
+        "date": "2022/09/10",
+        "teamA": "Morocco",
+        "teamB": "Portugal",
+        "stadium": "Al Bayt stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "Morocco",
+                            "player": "Youssef En Nesyri",
+                            "minute": "42",
+                            "score": {
+                                "teamA": 1,
+                                "teamB": 0
+                            }
+                        }
+                    ],
+            "finalResult":{
+                "winner": "Morocco",
+                "loser": "Portugl",
+                "finalResult":"1 - 0"
+            }
+        }
+    },
+    {
+        "phase": "Semifinals",
+        "date": "2022/12/13",
+        "teamA": "Argentina",
+        "teamB": "Croatia",
+        "stadium": "Lusail stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "Argentina",
+                            "player": "Lionel Messi",
+                            "minute": "34",
+                            "score": {
+                                "teamA": 1,
+                                "teamB": 0
+                            }
+                        },
+                        {
+                            "team": "Argentina",
+                            "player": "Julian Alvarez",
+                            "minute": "39",
+                            "score": {
+                                "teamA": 2,
+                                "teamB": 0
+                            }
+                        }, 
+                        {
+                            "team": "Argentina",
+                            "player": "Julian Alvarez",
+                            "minute": "69",
+                            "score": {
+                                "teamA": 3,
+                                "teamB": 0
+                            }
+                        }
+                    ],
+            "finalResult":{
+                "winner": "Argentina",
+                "loser": "Croatia",
+                "finalResult":"3 - 0"
+            }
+        }
+    },
+    {
+        "phase": "Semifinals",
+        "date": "2022/12/14",
+        "teamA": "France",
+        "teamB": "Morocco",
+        "stadium": "Jor stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "France",
+                            "player": "Theo Hernandez",
+                            "minute": "5",
+                            "score": {
+                                "teamA": 1,
+                                "teamB": 0
+                            }
+                        },
+                        {
+                            "team": "France",
+                            "player": "Randal Kolo Muani",
+                            "minute": "79",
+                            "score": {
+                                "teamA": 2,
+                                "teamB": 0
+                            }
+                        }
+                    ],
+            "finalResult":{
+                "winner": "France",
+                "loser": "Morocco",
+                "finalResult":"2 - 0"
+            }
+        }
+    },
+    {
+        "phase": "Third Position",
+        "date": "2022/12/17",
+        "teamA": "Croatia",
+        "teamB": "Morocco",
+        "stadium": "Rayán stadium",
+        "matchInfo": {
+            "goals":[
+                        {
+                            "team": "France",
+                            "player": "Theo Hernandez",
+                            "minute": "5",
+                            "score": {
+                                "teamA": 1,
+                                "teamB": 0
+                            }
+                        },
+                        {
+                            "team": "France",
+                            "player": "Randal Kolo Muani",
+                            "minute": "79",
+                            "score": {
+                                "teamA": 2,
+                                "teamB": 0
+                            }
+                        }
+                    ],
+            "finalResult":{
+                "winner": "France",
+                "loser": "Morocco",
+                "finalResult":"2 - 0"
+            }
+        }
+    }
+]
+)
